@@ -1,0 +1,353 @@
+/*.modtype_courseinfo .activity-item {
+    background-image: url(https://picsum.photos/seed/picsum/200/300);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: exclusion;
+    background-color: #27ae6187;
+}
+
+.modtype_courseinfo h3.modtitle {
+    color: white;
+}*/
+
+ .modtype_courseinfo {
+    list-style: none;
+    overflow: hidden;
+ }
+
+ .modtype_courseinfo .cover {
+    background: black;
+    color: white;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    left: 40%;
+}
+
+.modtype_courseinfo .coursetitle {
+    width: 60%;
+}
+
+.units:hover + .cover {
+    transform: translateX(101%);
+}
+
+.cover:before {
+    top: 0;
+    transform: skewX(-35deg);
+    transform-origin: 100% 0;
+    background: black;
+    color: white;
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+}
+
+.mod_courseinfo-wrapper .courseinfo_container a:hover {
+    text-decoration: none;
+}
+
+.mod_courseinfo-wrapper a.card.dashboard-card.row:hover {
+    transform: scale(1.1);
+    transition: scale .2s ease-in-out;
+    z-index: 10000;
+    background-color: var(--primary);
+    transition: background-color 200ms linear;
+}
+
+.mod_courseinfo-wrapper .unithelp {
+    margin-top: -35px;
+    position: absolute;
+    right: 0;
+}
+
+.mod_courseinfo-wrapper .units .dashboard-card-deck .dashboard-card {
+    min-height: 67px!important;
+    overflow: hidden;
+}
+
+
+@media(max-width:767px) {
+    .mod_courseinfo-wrapper .units .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: 100%;
+    }
+    .mod_courseinfo-wrapper .units .card-img, .card-img-bottom {
+        filter: brightness(50%);
+    }
+
+    .mod_courseinfo-wrapper .units .course-info-container .text-dark {
+        color: white!important;
+    }
+
+    .mod_courseinfo-wrapper .units .card-body.pr-1.course-info-container.col-md-9 {
+        margin-left: 0px!important;
+    }
+}
+
+@media(max-width:575px) {
+    .mod_courseinfo-wrapper .units .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+
+    }
+    .mod_courseinfo-wrapper .units .card-img, .card-img-bottom {
+        filter: brightness(50%);
+    }
+
+    .mod_courseinfo-wrapper .units .course-info-container .text-dark {
+        color: white!important;
+    }
+}
+
+.unitheading {
+    text-align:center;
+}
+
+.features-icons-item {
+  max-width: 20rem;
+}
+.features-icons-icon {
+  height: 7rem;
+}
+.features-icons-icon i {
+  font-size: 2.5rem;
+}
+
+.mod_courseinfo-wrapper .courseinfo_container {
+    margin-top: 20px;
+}
+
+.mod_courseinfo-wrapper .container {
+    max-width: revert;
+    padding: 0;
+}
+
+@media (min-width: 992px) {
+    .mod_courseinfo-wrapper .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        min-height: 50px;
+        text-align: center;
+        padding: 10px;
+    }
+    .mod_courseinfo-wrapper .units .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: calc(33.3333333% - 0.5rem);
+    }
+}
+
+@media (min-width: 840px) {
+    .mod_courseinfo-wrapper .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        min-height: 50px;
+        text-align: center;
+        padding: 10px;
+    }
+    .mod_courseinfo-wrapper .units .dashboard-card-deck:not(.fixed-width-cards) .dashboard-card {
+        width: calc(33.3333333% - 0.5rem);
+    }
+}
+
+.mod_courseinfo-wrapper .dashboard-list-img {
+    height: -webkit-fill-available;
+    position: absolute;
+}
+
+.mod_courseinfo-wrapper a.card.dashboard-card.row {
+    padding: 0px!important;
+    transition: all .2s ease-in-out;
+    margin: 0px;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+}
+
+.mod_courseinfo-wrapper .card-body.pr-1.course-info-container.col-md-9 {
+    margin-left: 25%;
+    padding: 10px;
+    text-align: left;
+}
+
+.mod_courseinfo-wrapper .card-body.pr-1.course-info-container.col-md-9 .multiline {
+    text-align: left;
+    display: block;
+}
+
+.mod_courseinfo-wrapper .card-img, .card-img-bottom {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.modtype_courseinfo a#edit_courseinfo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+//* Existing *//
+
+.mod_courseinfo-wrapper {
+}
+
+.mod_courseinfo-title {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.mod_courseinfo-title::after {
+    content: '';
+    position: absolute;
+    background-color: #e2e2e2;
+    height: 1px;
+    bottom: 0;
+
+    width: 100%; /* Fallback for width with calc. */
+    left: 0; /* Fallback for the left with calc. */
+
+    width: calc(100% + 10px); /* Should be this, unfortunately Moodle strips off calcs with a +. */
+    left: calc(0% + -5px); /* We add this weird one so that it only applies when the width also does. */
+}
+
+.mod_courseinfo-contentwrapper {
+/*    padding: 1rem 0 0;*/
+}
+
+.mod_courseinfo-content {
+    display: flex;
+}
+
+.mod_courseinfo-paragraph {
+    flex: 1 1 auto;
+    order: -1;
+}
+
+.mod_courseinfo-image {
+    padding-left: 2rem;
+    flex: 0 0 auto;
+}
+
+.mod_courseinfo-resources {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mod_courseinfo-resource {
+    margin: 0 1.5rem .5rem 0;
+}
+
+.mod_courseinfo-resourcesbox h4 {
+    font-size: 1.1em;
+}
+
+.mod_courseinfo-resource a {
+    border-radius: 3px;
+    padding: 3px 9px;
+    text-decoration: none;
+    background-color: #00bd70;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    max-width: 250px;
+}
+
+.mod_courseinfo-resource a:hover,
+.mod_courseinfo-resource a:visited,
+.mod_courseinfo-resource a:active,
+.mod_courseinfo-resource a:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.mod_courseinfo-resource a:hover {
+    opacity: .8;
+}
+
+.mod_courseinfo-resource .fa {
+    margin-right: 5px;
+}
+
+@media (max-width: 576px) {
+    .mod_courseinfo-content {
+        flex-wrap: wrap;
+    }
+    .mod_courseinfo-image {
+        padding: 0;
+        margin-bottom: 1rem;
+        order: -1;
+    }
+}
+
+.tooltip1 {
+  position: relative;    
+  background: #d10045;
+  padding: 5px 12px;
+  margin: 5px;
+  font-size: 15px;
+  border-radius: 100%;
+  color: #FFF;
+}
+
+.tooltip1:before,
+.tooltip1:after {
+  position: absolute;
+  content: '';
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.tooltip1:before {
+  border-width: 10px 8px 0 8px;
+  border-style: solid;
+  border-color: #d10045 transparent transparent transparent;
+  top: -15px;
+  right: 8px;
+  transform: translateY(20px);
+}
+
+.tooltip1:after {
+  content: attr(data-tooltip);
+  background: #d10045;
+  width: 300px;
+    height: auto;
+    font-size: 13px;
+    font-weight: 300;
+    top: -97px;
+  right: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+}
+
+.tooltip1:hover::before,
+.tooltip1:hover::after {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+@keyframes shake {
+  0% { 
+    transform: rotate(2deg);
+  }
+  50% {
+   transform: rotate(-3deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#anim:hover {
+  animation: shake 500ms ease-in-out forwards;
+}
